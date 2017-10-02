@@ -1,9 +1,19 @@
 {% extends 'basic/home_page.html' %}
 
+{% block something %}
+    <style>
+        body {
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQh0Ia8tKgFxF_6NGDaJejkj-iZASXRwYNqmv-v_JiypP-_5OVQ");
+            background-size: 100% 100%;
+        }
+    </style>
+{% endblock %}
+
 {% block content %}
     <h1>This is about - {{ club.club_name }}</h1>
-    <img src= {{ club.club_logo }} />
+    <img height="30%" width="50%" align="centre" src= {{ club.club_logo }} />
     <h2>Secretary of the club is - {{ club.club_secretary }}</h2>
     <h2>Joint Secretary of the club is - {{ club.club_joint_secretary }}</h2>
     <h2>About the club - {{ club.club_info }}</h2>
+    <a href="/basic/">Go Back</a>
 {% endblock %}

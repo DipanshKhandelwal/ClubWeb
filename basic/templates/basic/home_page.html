@@ -6,6 +6,8 @@
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="{% static 'css/home_page.css' %}">
         <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+        {% block something %}
+        {% endblock %}
     </head>
     <body>
         <div class="page-header">
@@ -17,12 +19,16 @@
                 {% block content %}
                 {% endblock %}
                 </div>
-                <div class="col-md-8">
-                    <ul>
-                        <li><a href="/basic/artclub/">art club</a></li>
-                        <li><a href="/basic/danceclub/">dance club</a></li>
-                    </ul>
-                </div>
+                <br><br>
+                <h1>ALL THE CLUBS :-</h1>
+                <ul>
+                    <li><a href="/basic/artclub/">Art Club</a></li>
+                    <li><a href="/basic/danceclub/">Dance Club</a></li>
+                    <li><a href="/basic/gamingclub/">Gaming Club</a></li>
+                    <li><a href="/basic/codingclub/">Coding Club</a></li>
+                    <li><a href="/basic/musicclub/">Music Club</a></li>
+                    <li><a href="/basic/photographyclub/">Photography Club</a></li>
+                </ul>
             </div>
         </div>
     </body>
