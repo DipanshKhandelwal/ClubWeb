@@ -2,12 +2,12 @@ from django.db import models
 from django.utils import timezone
 # Create your models here.
 CLUB_NAMES = (
-    ('Art Club', 'ART CLUB'),
-    ('Dance Club', 'DANCE CLUB'),
-    ('Music Club', 'MUSIC CLUB'),
-    ('Coding Club', 'CODING CLUB'),
-    ('Gaming Club', 'GAMING CLUB'),
-    ('Photography Club', 'PHOTOGRAPHY CLUB'),
+    ('ArtClub', 'ART CLUB'),
+    ('DanceClub', 'DANCE CLUB'),
+    ('MusicClub', 'MUSIC CLUB'),
+    ('CodingClub', 'CODING CLUB'),
+    ('GamingClub', 'GAMING CLUB'),
+    ('PhotographyClub', 'PHOTOGRAPHY CLUB'),
 )
 
 

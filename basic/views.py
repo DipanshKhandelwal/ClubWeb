@@ -15,7 +15,8 @@ def club_page(request, slug):
     for i in clubs:
         if slug == i.club_name.lower():
             t = True
+            break
     if t:
-        return render(request, 'basic/club_page.html', {'clubname': slug})
+        return render(request, 'basic/club_page.html', {'club': i})
     else:
         return HttpResponse('<h1>Club does not exist !!</h1><br><a href="/basic/">Go Back</a>')
