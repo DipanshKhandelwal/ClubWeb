@@ -2,10 +2,12 @@ from django.db import models
 from django.utils import timezone
 # Create your models here.
 CLUB_NAMES = (
-    ('ArtClub','ARTCLUB'),
-    ('DanceClub','DANCECLUB'),
-    ('MusicClub','MUSICCLUB'),
-    ('CodingClub','CODINGCLUB'),
+    ('ArtClub', 'ART CLUB'),
+    ('DanceClub', 'DANCE CLUB'),
+    ('MusicClub', 'MUSIC CLUB'),
+    ('CodingClub', 'CODING CLUB'),
+    ('GamingClub', 'GAMING CLUB'),
+    ('PhotographyClub', 'PHOTOGRAPHY CLUB'),
 )
 
 class Post(models.Model):
