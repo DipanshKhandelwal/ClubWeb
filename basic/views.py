@@ -1,11 +1,10 @@
 from django.shortcuts import render
 
+
 # Create your views here.
 def home_page(request):
     return render(request, 'basic/home_page.html')
 
-def art_club(request):
-    return render(request, 'basic/club_page.html', {'clubname': 'ART CLUB'})
 
-def dance_club(request):
-    return render(request, 'basic/club_page.html', {'clubname': 'DANCE CLUB'})
+def club_page(request, slug):
+    return render(request, 'basic/club_page.html', {'clubname': slug})
