@@ -1,14 +1,5 @@
 {% extends 'basic/home_page.html' %}
 
-{% block something %}
-    <style>
-        body {
-            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQh0Ia8tKgFxF_6NGDaJejkj-iZASXRwYNqmv-v_JiypP-_5OVQ");
-            background-size: 100% 100%;
-        }
-    </style>
-{% endblock %}
-
 {% block content %}
     <h1>This is about - {{ club.club_name }}</h1>
     <img height="30%" width="50%" align="centre" src= {{ club.club_logo }} />
