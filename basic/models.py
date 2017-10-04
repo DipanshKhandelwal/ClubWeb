@@ -26,7 +26,7 @@ class Club(models.Model):
     club_secretary = models.CharField(max_length=20)
     club_joint_secretary = models.CharField(max_length=20)
     club_info = models.TextField()
-    club_logo = models.CharField(max_length=1000)
+    club_logo = models.FileField()
 
     def __str__(self):
         return self.club_name
