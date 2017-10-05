@@ -1,0 +1,76 @@
+{% load staticfiles %}
+<html>
+    <head>
+        <title>ClubWeb</title>
+        <!--<link rel="shortcut icon" type="image/png" href="{%  static 'favicon.ico' %}"/>-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/home_page.css' %}">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button  type="button" class="navbar-toggle" data-toggle="collapse" data-target="#NavBar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#" style=" font-size: large ;font-family: "Roboto", "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Arial, sans-serif">
+                        ClubWeb
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse" id="NavBar">
+                    <ul class="nav navbar-nav">
+                        <li class="#">
+                                <a id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+                                    <span class="glyphicon glyphicon-music" aria-hidden="true"></span>&nbsp;
+                                    Clubs
+                                    &nbsp;<span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="background-color: black ">
+                                    <ul class="nav navbar-nav">
+                                        <li>
+                                            {% for club in Clubs %}
+                                            <a href="/clubs/{{ club.club_name }}/">
+                                                {{ club.club_name }}
+                                            </a>
+                                            {% endfor %}
+                                        </li>
+                                    </ul>
+                                </div>
+                        </li>
+                        <li class="#">
+                            <a id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+                                <span class="glyphicon glyphicon-sunglasses" aria-hidden="true"></span>&nbsp;
+                                UpcomingEvents
+                                &nbsp;<span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="background-color: black ">
+                                <ul class="nav navbar-nav">
+                                    <li>
+                                        {% for club in Clubs %}
+                                        <a href="/clubs/{{ club.club_name }}/">
+                                            {{ club.club_name }}
+                                        </a>
+                                        {% endfor %}
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="content container">
+            <div class="row">
+                <div class="col-md-8">
+                {% block content %}
+                {% endblock %}
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
