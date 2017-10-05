@@ -22,3 +22,4 @@ def club_page(request, slug):
         return render(request, 'basic/club_page.html', {'club': i, 'Clubs': x})
     else:
         return HttpResponse('<h1>Club does not exist !!</h1><br><a href="/basic/">Go Back</a>')
+
