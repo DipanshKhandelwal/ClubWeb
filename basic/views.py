@@ -1,12 +1,13 @@
 from django.shortcuts import render
-from .models import Club
+from .models import Club, Post
 from django.http import HttpResponse
 
 
 # Create your views here.
 def home_page(request):
     clubs = Club.objects.all()
-    return render(request, 'basic/home_page.html', {'Clubs': clubs})
+    posts = Post.objects.all()
+    return render(request, 'basic/home_page.html', {'Clubs': clubs, 'Posts': posts})
 
 
 def club_page(request, slug):
