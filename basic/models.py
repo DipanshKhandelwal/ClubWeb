@@ -21,6 +21,15 @@ class Post(models.Model):
         return self.club_name + '--' + self.title
 
 
+class Event(models.Model):
+    title = models.CharField(max_length=120)
+    information = models.TextField()
+    time = models.DateTimeField()
+
+    def __str__(self):
+        return self.title + 'at' + str(self.time)
+
+
 class Club(models.Model):
     club_name = models.CharField(max_length=20, choices=CLUB_NAMES)
     club_secretary = models.CharField(max_length=20)

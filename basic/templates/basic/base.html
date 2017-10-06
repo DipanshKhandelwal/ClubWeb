@@ -18,7 +18,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#" style=" font-size: large ;font-family: "Roboto", "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Arial, sans-serif">
+                    <a class="navbar-brand" href="{% url 'home_page' %}" style=" font-size: large ;font-family: "Roboto", "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Arial, sans-serif">
                         ClubWeb
                     </a>
                 </div>
@@ -66,10 +66,8 @@
         </nav>
         <div class="content container">
             <div class="row">
-                <div class="col-md-8">
                 {% block content %}
                 {% endblock %}
-                </div>
             </div>
         </div>
     </body>

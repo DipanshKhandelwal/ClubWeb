@@ -1,6 +1,5 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Club, Post
-from django.http import HttpResponse
 
 
 # Create your views here.
@@ -11,8 +10,9 @@ def home_page(request):
 
 
 def post_detail(request, pk):
+    clubs = Club.objects.all()
     post = get_object_or_404(Post, pk=pk)
-    return render(request, 'basic/post_detail.html', {'post': post})
+    return render(request, 'basic/post_detail.html', {'Clubs': clubs, 'post': post})
 
 
 def club_page(request, slug):
@@ -27,5 +27,5 @@ def club_page(request, slug):
     if t:
         return render(request, 'basic/club_page.html', {'club': i, 'Clubs': x})
     else:
-        return HttpResponse('<h1>Club does not exist !!</h1><br><a href="/basic/">Go Back</a>')
+        return render(request, 'basic/error404.html', {'Clubs': x})
 
