@@ -2,7 +2,8 @@
 
 {% block content %}
     <div class="container-fluid">
-        <div class="container">
+        <div class="container" style="background-color: darkgrey; border: dotted">
+            <h1 align="center"> POSTS </h1>
             {% for post in Posts %}
             <br><br>
             <a href="{% url 'post_detail' pk=post.pk %}"><h1>{{ post.club_name }}</h1></a>
@@ -12,7 +13,8 @@
             <br><br>
             {%  endfor %}
         </div>
-        <div class="container">
+        <div class="container" style="background-color: darkgrey; border: dotted"">
+            <h1 align="center"> EVENTS </h1>
             {% for event in Events %}
             <br><br>
             <a href="{% url 'event_detail' pk2=event.pk %}"><h1>{{ event.title }}</h1></a>
