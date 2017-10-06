@@ -1,12 +1,9 @@
 {% extends 'basic/base.html' %}
 
 {% block content %}
-    {% for post in Posts %}
-        <br><br>
-        <a href="{% url 'post_detail' pk=post.pk %}"><h1>{{ post.club_name }}</h1><a/>
+        <h1>{{ post.club_name }}</h1>
         <h3>{{ post.title }}</h3>
         <p>{{ post.information }}</p>
         <p>{{ post.post_time }}</p>
         <br><br>
-    {%  endfor %}
 {% endblock %}

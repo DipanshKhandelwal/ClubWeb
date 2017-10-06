@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .models import Club, Post
 from django.http import HttpResponse
 
@@ -8,6 +8,11 @@ def home_page(request):
     clubs = Club.objects.all()
     posts = Post.objects.all()
     return render(request, 'basic/home_page.html', {'Clubs': clubs, 'Posts': posts})
+
+
+def post_detail(request, pk):
+    post = get_object_or_404(Post, pk=pk)
+    return render(request, 'basic/post_detail.html', {'post': post})
 
 
 def club_page(request, slug):
