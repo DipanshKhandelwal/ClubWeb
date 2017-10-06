@@ -34,7 +34,7 @@
                                     <ul class="nav navbar-nav">
                                         <li>
                                             {% for club in Clubs %}
-                                            <a href="/clubs/{{ club.club_name }}/">
+                                            <a href="{% url 'club_page' slug=club.club_name %}">
                                                 {{ club.club_name }}
                                             </a>
                                             {% endfor %}
@@ -43,17 +43,17 @@
                                 </div>
                         </li>
                         <li class="#">
-                            <a id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+                            <a id="dropdownMenuButton2" data-toggle="dropdown" aria-expanded="false">
                                 <span class="glyphicon glyphicon-sunglasses" aria-hidden="true"></span>&nbsp;
                                 UpcomingEvents
                                 &nbsp;<span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
                             </a>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="background-color: black ">
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2" style="background-color: black ">
                                 <ul class="nav navbar-nav">
                                     <li>
-                                        {% for club in Clubs %}
-                                        <a href="/clubs/{{ club.club_name }}/">
-                                            {{ club.club_name }}
+                                        {% for event in Events %}
+                                        <a href="{% url 'event_detail' pk2=event.pk %}">
+                                            {{ event.title }}
                                         </a>
                                         {% endfor %}
                                     </li>
