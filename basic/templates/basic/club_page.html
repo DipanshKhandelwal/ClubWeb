@@ -8,8 +8,9 @@
     <h2>Secretary of the club is - {{ club.club_secretary }}</h2>
     <h2>Joint Secretary of the club is - {{ club.club_joint_secretary }}</h2>
     <h2>About the club - {{ club.club_info }}</h2>
-    <a href="{% url 'home_page' %}"> Go Back </a>
+    <h2>members:-</h2>
     {% for i in members %}
-            <h2>members:- {{ i.name }}</h2>
+            <h5>{{ i.name }}</h5><br>
     {% endfor %}
+    <a href="{% url 'home_page' %}"> Go Back </a>
 {% endblock %}

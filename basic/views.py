@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Club, Post, Event
+from .models import Club, Post, Event, ClubMember
 
 
 # Create your views here.
@@ -35,7 +35,7 @@ def club_page(request, slug):
             t = True
             break
     if t:
-        members = i.ClubMember_set.all()
+        members = ClubMember.objects.filter(club=i)
         return render(request, 'basic/club_page.html', {'club': i, 'Clubs': x, 'Events': events, 'members': members})
     else:
         return render(request, 'basic/error404.html', {'Clubs': x, 'Events': events})
