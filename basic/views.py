@@ -35,7 +35,8 @@ def club_page(request, slug):
             t = True
             break
     if t:
-        return render(request, 'basic/club_page.html', {'club': i, 'Clubs': x, 'Events': events})
+        members = i.ClubMember_set.all()
+        return render(request, 'basic/club_page.html', {'club': i, 'Clubs': x, 'Events': events, 'members': members})
     else:
         return render(request, 'basic/error404.html', {'Clubs': x, 'Events': events})
 
