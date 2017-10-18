@@ -13,7 +13,7 @@
         <nav class="navbar navbar-inverse">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <button  type="button" class="navbar-toggle" data-toggle="collapse" data-target="#NavBar">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#NavBar">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -32,43 +32,29 @@
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="background-color: black ">
                                     <ul class="nav navbar-nav">
-                                        <li>
-                                            <a href="{% url 'club_page' slug=club.club_name %}">
-                                                Add Club
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="{% url 'club_page' slug=club.club_name %}">
-                                                Add Event
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="{% url 'club_page' slug=club.club_name %}">
-                                                Add Post
-                                            </a>
-                                        </li>
+
                                     </ul>
                                 </div>
                         </li>
                     </ul>
                     <ul class="nav navbar-nav navbar-left">
                         <li class="#">
-                                <a id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
-                                    <span class="glyphicon glyphicon-music" aria-hidden="true"></span>&nbsp;
-                                    Clubs
-                                    &nbsp;<span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="background-color: black ">
-                                    <ul class="nav navbar-nav">
-                                        <li>
-                                            {% for club in Clubs %}
-                                            <a href="{% url 'club_page' slug=club.club_name %}">
-                                                {{ club.club_name }}
-                                            </a>
-                                            {% endfor %}
-                                        </li>
-                                    </ul>
-                                </div>
+                            <a id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+                                <span class="glyphicon glyphicon-music" aria-hidden="true"></span>&nbsp;
+                                Clubs
+                                &nbsp;<span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="background-color: black ">
+                                <ul class="nav navbar-nav">
+                                    <li>
+                                        {% for club in Clubs %}
+                                        <a href="{% url 'club_page' slug=club.club_name %}">
+                                            {{ club.club_name }}
+                                        </a>
+                                        {% endfor %}
+                                    </li>
+                                </ul>
+                            </div>
                         </li>
                         <li class="#">
                             <a id="dropdownMenuButton2" data-toggle="dropdown" aria-expanded="false">
