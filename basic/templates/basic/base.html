@@ -18,7 +18,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="{% url 'home_page' %}" style=" font-size: large ;font-family: "Roboto", "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Arial, sans-serif">
+                    <a class="navbar-brand" href="{% url 'home_page' %}" style=" font-size: large ;font-family:"Roboto", "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Arial, sans-serif">
                         ClubWeb
                     </a>
                 </div>
@@ -33,13 +33,19 @@
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="background-color: black ">
                                     <ul class="nav navbar-nav">
                                         <li>
-                                            Club
+                                            <a href="{% url 'club_page' slug=club.club_name %}">
+                                                Add Club
+                                            </a>
                                         </li>
                                         <li>
-                                            Event
+                                            <a href="{% url 'club_page' slug=club.club_name %}">
+                                                Add Event
+                                            </a>
                                         </li>
                                         <li>
-                                            Post
+                                            <a href="{% url 'club_page' slug=club.club_name %}">
+                                                Add Post
+                                            </a>
                                         </li>
                                     </ul>
                                 </div>
