@@ -3,6 +3,14 @@ from django.utils import timezone
 
 
 # Create your models here.
+CLUB_NAMES = (
+    ('ArtClub', 'ART CLUB'),
+    ('DanceClub', 'DANCE CLUB'),
+    ('MusicClub', 'MUSIC CLUB'),
+    ('CodingClub', 'CODING CLUB'),
+    ('GamingClub', 'GAMING CLUB'),
+    ('PhotographyClub', 'PHOTOGRAPHY CLUB'),
+)
 
 
 class Post(models.Model):
