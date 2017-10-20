@@ -9,7 +9,7 @@ def home_page(request):
     clubs = Club.objects.all()
     events = Event.objects.all()
     posts = Post.objects.all()
-    return render(request, 'basic/home_page.html', {'Clubs': clubs, 'Posts': posts, 'Events': events})
+    return render(request, 'clubs/home_page.html', {'Clubs': clubs, 'Posts': posts, 'Events': events})
 
 
 def club_page(request, slug):
@@ -24,6 +24,6 @@ def club_page(request, slug):
             break
     if t:
         members = ClubMember.objects.filter(club=i)
-        return render(request, 'basic/club_page.html', {'club': i, 'Clubs': x, 'Events': events, 'members': members})
+        return render(request, 'clubs/club_page.html', {'club': i, 'Clubs': x, 'Events': events, 'members': members})
     else:
         return render(request, 'basic/error404.html', {'Clubs': x, 'Events': events})

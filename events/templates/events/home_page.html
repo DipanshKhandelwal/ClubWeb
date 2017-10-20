@@ -1,0 +1,17 @@
+{% extends 'basic/base.html' %}
+
+{% block content %}
+    <div class="container-fluid">
+        <div class="container" style="background-color: darkgrey; border: dotted"">
+            <h1 align="center"> EVENTS </h1>
+            {% for event in Events %}
+            <br><br>
+            <a href="{% url 'event_detail' pk2=event.pk %}"><h1>{{ event.title }}</h1></a>
+            <h3>{{ event.title }}</h3>
+            <p>{{ eventt.information }}</p>
+            <p>{{ event.time }}</p>
+            <br><br>
+            {%  endfor %}
+        </div>
+    </div>
+{% endblock %}
