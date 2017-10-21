@@ -1,28 +1,24 @@
 {% extends 'basic/base.html' %}
 
 {% block content %}
-    <div class="container-fluid">
-        <div class="container" style="background-color: darkgrey; border: dotted">
-            <h1 align="center"> POSTS </h1>
-            {% for post in Posts %}
-            <br><br>
-            <a href="{% url 'post_detail' pk=post.pk %}"><h1>{{ post.club_name }}</h1></a>
-            <h3>{{ post.title }}</h3>
-            <p>{{ post.information }}</p>
-            <p>{{ post.post_time }}</p>
-            <br><br>
-            {%  endfor %}
-        </div>
-        <div class="container" style="background-color: darkgrey; border: dotted"">
-            <h1 align="center"> EVENTS </h1>
-            {% for event in Events %}
-            <br><br>
-            <a href="{% url 'event_detail' pk2=event.pk %}"><h1>{{ event.title }}</h1></a>
-            <h3>{{ event.title }}</h3>
-            <p>{{ eventt.information }}</p>
-            <p>{{ event.time }}</p>
-            <br><br>
-            {%  endfor %}
-        </div>
+    <h1>This is home page</h1>
+    <div>
+        <ul>
+            <li>
+            <h2><a href="{% url 'clubs_home_page' %}">
+                Clubs
+            </a></h2>
+            </li>
+            <li><h2>
+            <a href="{% url 'events_home_page' %}">
+                Events
+            </a></h2>
+            </li>
+            <li><h2>
+            <a href="{% url 'posts_home_page' %}">
+                Posts
+            </a></h2>
+            </li>
+        </ul>
     </div>
 {% endblock %}
