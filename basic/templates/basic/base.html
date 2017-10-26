@@ -27,12 +27,22 @@
                         <li class="#">
                                 <a id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
                                     <span class="glyphicon glyphicon-music" aria-hidden="true"></span>&nbsp;
-                                    Add
+                                    GoTo
                                     &nbsp;<span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="background-color: black ">
                                     <ul class="nav navbar-nav">
-
+                                        <li>
+                                        <a href="{% url 'clubs_home_page' %}">
+                                            Clubs
+                                        </a>
+                                        <a href="{% url 'events_home_page' %}">
+                                            Events
+                                        </a>
+                                        <a href="{% url 'posts_home_page' %}">
+                                            Posts
+                                        </a>
+                                        </li>
                                     </ul>
                                 </div>
                         </li>
