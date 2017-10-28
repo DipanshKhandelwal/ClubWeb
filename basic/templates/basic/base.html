@@ -34,32 +34,38 @@
     <body>
         <div class="container-fluid" style="background-color: white">
             <div class="row">
-                <div class="col-md-2 float-left" style="margin-left:20px; margin-right: 20px;">
-                    <a href="{% url 'home_page' %}" style="text-decoration: none;">
-                    <h1 class="myfont2 myfont" style="color: #0c2760; font-size: 50px"> ClubWeb </h1>
-                    </a>
-                </div>
-                <div class="col-sm-1" style="margin-left:20px;">
+                <div class="col-md-1 float-left" style="margin: 0 auto">
                     <a href="{% url 'home_page' %}">
                         <img src="/media/iiitv.png" style="height: 100px; width: 100px;"/>
                     </a>
                 </div>
-                <div class="col-md-5 ">
+                <div class="col-md-5" style="margin-right: 0">
                     <a href="{% url 'home_page' %}" style="text-decoration: none;">
                         <h3>
                             Indian Institute of Information Technology <h3 style="color: #0c2760; margin-top: 0px" >Vadodara</h3>
                         </h3>
                     </a>
                 </div>
-                <div id="load" style="font-size: 50px;" class="myfont2 myfont">
-                <div style="color: chocolate">B</div>
-                <div style="color: seagreen">E</div>
-                <div style="color: brown">W</div>
-                <div style="color: steelblue">B</div>
-                <div style="color: blueviolet">U</div>
-                <div style="color: yellow">L</div>
-                <div style="color: red">C</div>
-            </div>
+                <div class=" col-md-4 float-right">
+                    <div id="load" style="font-size: 50px;" class="myfont2 myfont">
+                    <div style="color: chocolate">B</div>
+                    <div style="color: seagreen">E</div>
+                    <div style="color: brown">W</div>
+                    <div style="color: steelblue">B</div>
+                    <div style="color: blueviolet">U</div>
+                    <div style="color: yellow">L</div>
+                    <div style="color: red">C</div>
+                    </div>
+
+                    <div>
+                        <div class="col-md-2" style="">
+                            <a href="{% url 'home_page' %}" style="text-decoration: none;">
+                                <h1 class="myfont2 myfont" style="color: #0c2760; font-size: 50px"> ClubWeb </h1>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </div>
         <nav class="navbar navbar-inverse" style="background-color: #0c2760;">
@@ -82,17 +88,32 @@
                                     GoTo
                                     &nbsp;<span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
                                 </a>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="color: white; background-color: black ">
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="background-color: #0c2760 ">
                                     <ul class="nav navbar-nav">
                                         <li>
-                                        <a href="{% url 'clubs_home_page' %}">
+                                        <a href="{% url 'clubs_home_page' %}" style="color: white">
                                             Clubs
+                                            <span class="badge badge-primary badge-pill" style="color: #0c2760; background-color: white;">
+                                                {% if Clubs %}
+                                                    {{Clubs|length}}
+                                                {% endif %}
+                                            </span>
                                         </a>
-                                        <a href="{% url 'events_home_page' %}">
+                                        <a href="{% url 'events_home_page' %}" style="color: white">
                                             Events
+                                            <span class="badge badge-primary badge-pill" style="color: #0c2760 ;background-color: white;">
+                                                {% if Events %}
+                                                    {{Events|length}}
+                                                {% endif %}
+                                            </span>
                                         </a>
-                                        <a href="{% url 'posts_home_page' %}">
+                                        <a href="{% url 'posts_home_page' %}" style="color: white">
                                             Posts
+                                            <span class="badge badge-primary badge-pill" style="color: #0c2760; background-color: white;">
+                                                {% if Posts %}
+                                                    {{Posts|length}}
+                                                {% endif %}
+                                            </span>
                                         </a>
                                         </li>
                                     </ul>
@@ -106,11 +127,11 @@
                                 Clubs
                                 &nbsp;<span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
                             </a>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="background-color: black; color: white;">
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="background-color: #0c2760; ">
                                 <ul class="nav navbar-nav">
                                     <li>
                                         {% for club in Clubs %}
-                                        <a href="{% url 'club_page' slug=club.club_name %}">
+                                        <a href="{% url 'club_page' slug=club.club_name %}" style="color: white">
                                             {{ club.club_name }}
                                         </a>
                                         {% endfor %}
@@ -124,11 +145,11 @@
                                 Events
                                 &nbsp;<span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
                             </a>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2" style="background-color: black;color: white; ">
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2" style="background-color: #0c2760;">
                                 <ul class="nav navbar-nav">
                                     <li>
                                         {% for event in Events %}
-                                        <a href="{% url 'event_detail' pk2=event.pk %}">
+                                        <a href="{% url 'event_detail' pk2=event.pk %}" style="color: white">
                                             {{ event.title }}
                                         </a>
                                         {% endfor %}
@@ -142,11 +163,11 @@
                                 Posts
                                 &nbsp;<span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
                             </a>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton3" style="background-color: black; color: white;">
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton3" style="background-color: #0c2760; ">
                                 <ul class="nav navbar-nav">
                                     <li>
                                         {% for post in Posts %}
-                                        <a href="{% url 'post_detail' pk=post.pk %}">
+                                        <a href="{% url 'post_detail' pk=post.pk %}" style="color: white">
                                             {{ post.title }}
                                         </a>
                                         {% endfor %}

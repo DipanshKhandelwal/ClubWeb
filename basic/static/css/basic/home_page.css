@@ -3,10 +3,10 @@ body{
 }
 
 #load {
-  position:absolute;
+  position:relative;
   width:600px;
   height:36px;
-    margin-left: 810px;
+  margin-left: 300px;
   overflow:visible;
   -webkit-user-select:none;
   -moz-user-select:none;
