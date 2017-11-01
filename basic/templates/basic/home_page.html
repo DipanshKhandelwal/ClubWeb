@@ -1,24 +1,55 @@
 {% extends 'basic/base.html' %}
 
 {% block content %}
-    <h1>This is home page</h1>
-    <div>
-        <ul>
-            <li>
-            <h2><a href="{% url 'clubs_home_page' %}">
-                Clubs
-            </a></h2>
-            </li>
-            <li><h2>
-            <a href="{% url 'events_home_page' %}">
-                Events
-            </a></h2>
-            </li>
-            <li><h2>
-            <a href="{% url 'posts_home_page' %}">
-                Posts
-            </a></h2>
-            </li>
-        </ul>
+    <div class="container-fluid" style="padding-left: 35px">
+        <div>
+            <h1 style="text-align: center" class="myfont2">Welcome to the ClubWeb</h1>
+        </div>
+        <div>
+            <div class="row" >
+                <div class="col-lg-4">
+                    <div class="card" style="width: 40rem;background-color: azure; padding: 20px; margin-bottom: 20px;">
+                        <img class="card-img-top"
+                             src="https://pbs.twimg.com/profile_images/839721704163155970/LI_TRk1z_400x400.jpg"
+                             alt="Card image cap"
+                             style="width: auto";
+                             height="150px";/>
+                        <div class="card-body">
+                        <h4 class="card-title">Clubs</h4>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Explore Clubs</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card" style="width: 40rem;background-color: azure; padding: 20px; margin-bottom: 20px;">
+                        <img class="card-img-top"
+                             src="https://pbs.twimg.com/profile_images/839721704163155970/LI_TRk1z_400x400.jpg"
+                             alt="Card image cap"
+                             style="width: auto";
+                             height="150px";/>
+                        <div class="card-body">
+                        <h4 class="card-title">Posts</h4>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Visit Posts</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card" style="width: 40rem;background-color: azure; padding: 20px; margin-bottom: 20px;">
+                        <img class="card-img-top"
+                             src="https://pbs.twimg.com/profile_images/839721704163155970/LI_TRk1z_400x400.jpg"
+                             alt="Card image cap"
+                             style="width: auto";
+                             height="150px";/>
+                        <div class="card-body">
+                        <h4 class="card-title">Events</h4>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Upcoming Events</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 {% endblock %}
