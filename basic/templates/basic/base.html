@@ -79,50 +79,16 @@
                     </a>
                 </div>
                 <div class="collapse navbar-collapse" id="NavBar">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="#">
-                                <a id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false" style=" color: white;">
-                                    <span class="glyphicon glyphicon-circle-arrow-down" aria-hidden="true"></span>&nbsp;
-                                    GoTo
-                                    &nbsp;<span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="background-color: #0c2760 ">
-                                    <ul class="nav navbar-nav">
-                                        <li>
-                                        <a href="{% url 'clubs_home_page' %}" style="color: white">
-                                            Clubs
-                                            <span class="badge badge-primary badge-pill" style="color: #0c2760; background-color: white;">
-                                                {% if Clubs %}
-                                                    {{Clubs|length}}
-                                                {% endif %}
-                                            </span>
-                                        </a>
-                                        <a href="{% url 'events_home_page' %}" style="color: white">
-                                            Events
-                                            <span class="badge badge-primary badge-pill" style="color: #0c2760 ;background-color: white;">
-                                                {% if Events %}
-                                                    {{Events|length}}
-                                                {% endif %}
-                                            </span>
-                                        </a>
-                                        <a href="{% url 'posts_home_page' %}" style="color: white">
-                                            Posts
-                                            <span class="badge badge-primary badge-pill" style="color: #0c2760; background-color: white;">
-                                                {% if Posts %}
-                                                    {{Posts|length}}
-                                                {% endif %}
-                                            </span>
-                                        </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                        </li>
-                    </ul>
                     <ul class="nav navbar-nav navbar-left">
                         <li class="#">
                             <a id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false" style="color: white;">
                                 <span class="glyphicon glyphicon-music" aria-hidden="true"></span>&nbsp;
                                 Clubs
+                                <span class="badge badge-primary badge-pill" style="color: #0c2760; background-color: white;">
+                                    {% if Clubs %}
+                                        {{Clubs|length}}
+                                    {% endif %}
+                                </span>
                                 &nbsp;<span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
                             </a>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="background-color: #0c2760; ">
@@ -141,7 +107,13 @@
                             <a id="dropdownMenuButton2" data-toggle="dropdown" aria-expanded="false" style="color: white;">
                                 <span class="glyphicon glyphicon-sunglasses" aria-hidden="true"></span>&nbsp;
                                 Events
-                                &nbsp;<span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
+                                &nbsp;
+                                <span class="badge badge-primary badge-pill" style="color: #0c2760 ;background-color: white;">
+                                    {% if Events %}
+                                        {{Events|length}}
+                                    {% endif %}
+                                </span>
+                                <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
                             </a>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2" style="background-color: #0c2760;">
                                 <ul class="nav navbar-nav">
@@ -159,7 +131,13 @@
                             <a id="dropdownMenuButton3" data-toggle="dropdown" aria-expanded="false" style="color: white;">
                                 <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>&nbsp;
                                 Posts
-                                &nbsp;<span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
+                                &nbsp;
+                                <span class="badge badge-primary badge-pill" style="color: #0c2760; background-color: white;">
+                                    {% if Posts %}
+                                        {{Posts|length}}
+                                    {% endif %}
+                                </span>
+                                <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
                             </a>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton3" style="background-color: #0c2760; ">
                                 <ul class="nav navbar-nav">
