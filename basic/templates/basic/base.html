@@ -181,5 +181,25 @@
             {% block content %}
             {% endblock %}
         </div>
+        <div class="footer-basic" style="margin-top: 20px;">
+            <footer>
+                <div class="row" style="background-color:#0c2760; height: 100px">
+                    <div class="colmd-4" style="display: flex; justify-content: center; padding-top: 18px; color: white;">
+                        <a href="{% url 'clubs_home_page' %}">
+                        <span class="glyphicon glyphicon-music glyphicon_size" aria-hidden="true"></span>
+                        </a>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="{% url 'events_home_page' %}">
+                        <span class="glyphicon glyphicon-sunglasses glyphicon_size" aria-hidden="true" href="{% url 'events_home_page' %}"></span>
+                        </a>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="{% url 'posts_home_page' %}">
+                        <span class="glyphicon glyphicon-list-alt glyphicon_size" aria-hidden="true" href="{% url 'posts_home_page' %}"></span>
+                        </a>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </div>
+                </div>
+            </footer>
+        </div>
     </body>
 </html>
